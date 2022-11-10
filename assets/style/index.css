@@ -488,7 +488,6 @@ footer {
     height: 200px;
     display: flex;
     justify-content: center;
-    background-color: #53add4;
     background-size: 100% 100%;
 }
 .foot {
@@ -513,10 +512,59 @@ footer {
     margin-top: 10px;
 }
 
+.social a i {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    margin: 0 auto;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.social .facebook {
+    color: #0066cc;
+}
+
+.social .twitter {
+    color:#0080ff ;
+}
+
+.social .github {
+    color: #a6a6a6;
+}
+
+.social .ins {
+    color: #ff4500;
+}
+
+.social .weixin {
+    color: #31c35d;
+}
+
+.foot .right {
+    margin-top: 10px;
+    display: flex;
+    color: #fff;
+    font-size: 16px;
+}
+
+.right i {
+    margin-right: 10px;
+    margin-top: 2px;
+    font-size: 20px;
+}
+
 
 
 @media (max-width: 768px) {
-
     nav .bars {
         display: block;
     }
