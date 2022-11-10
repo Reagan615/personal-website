@@ -30,8 +30,9 @@ body {
 }
 
 .container {
-    width: min(100% - 30px, 1080px);
+    width: min(100% - 30px, 1280px);
     margin-inline: auto;
+    margin-top: 20px;
 }
 
 .row {
@@ -58,11 +59,6 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-}
-
-.title-2 i {
-    font-size: 30px;
-    color: #4da5ff;
 }
 
 .title-2 h1 {
@@ -138,7 +134,9 @@ nav .bars:hover {
     color: #fff;
 }
 
-
+.head nav {
+    margin-right: 20px;
+}
 
 nav ul li {
     display: inline;
@@ -161,6 +159,361 @@ nav ul li a:hover {
     font-weight: 900;
     color: #748189;
 }
+
+.banner {
+    width: 100%;
+    height: 700px;
+    background:url(../img/banner.jpg) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome {
+    font-size: 70px;
+    font-family: 'Teko', sans-serif;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.welcome span {
+    background-image: linear-gradient(135deg,#1de5e2,#b588f7);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color: transparent;
+}
+
+.intro {
+    font-size: 50px;
+    font-family: 'Teko', sans-serif;
+    color: #fff;
+}
+
+.intro span {
+    /* position: relative;
+    letter-spacing: 1px;
+    background-image: linear-gradient(135deg,#1de5e2,#b588f7);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color: transparent; */
+    letter-spacing: 1px;
+    color: #444;
+    position: relative;
+}
+
+
+.intro span:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: ellipse(80px 50px at -0% 50%);
+    -webkit-clip-path: ellipse(80px 50px at -0% 50%);
+    background-image: linear-gradient(135deg,#1de5e2,#b588f7);
+    color: transparent;
+    animation: spotlight 8s infinite;
+    background-size: 100%;
+    background-position: center center;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+@keyframes spotlight {
+    0% {
+      clip-path: ellipse(80px 50px at -0% 50%);
+      -webkit-clip-path: ellipse(80px 50px at -0% 50%);
+    }
+    50% {
+      clip-path: ellipse(80px 50px at 100% 50%);
+      -webkit-clip-path: ellipse(80px 50px at 100% 50%);
+    }
+    100% {
+      clip-path: ellipse(80px 50px at 0% 50%);
+      -webkit-clip-path: ellipse(80px 50px at -0% 50%);
+    }
+  } 
+
+.send {
+    margin-top: 50px;
+    width: 150px;
+    height: 50px;
+}
+
+.send button {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1de5e2;
+    border-radius: 12px;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    filter: hue-rotate(calc(var(--i)*60deg));
+}
+
+.send button::before,
+.send button::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 2px solid #1de5e2;
+    transition: all 0.3s ease-in-out 0.3s;
+
+}
+
+.send button::before {
+    top: 0;
+    left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.send button::after {
+    right: 0;
+    bottom: 0;
+    border-top: 0;
+    border-left: 0;
+}
+
+
+.send button:hover {
+    background-color: #1de5e2;
+    color: #fff;
+    box-shadow: 0 0 50px #1de5e2;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    transition-delay: 0.4s;
+}
+
+.send button:hover::before,
+.send button:hover::after {
+    width: 150px;
+    height: 50px;
+    border-radius: 12px;
+    transition-delay: 0s;
+}
+
+.slice {
+    margin-top: 30px;
+}
+.slice-title {
+    border-bottom: 1px solid #fff;
+}
+.slice-title h1 {
+    font-size: 26px;
+    color: #fff;
+    margin-left: 67px;
+    line-height: 45px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.column {
+    flex-grow: 1;
+    width: calc(25% - 15px);
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+.column:hover {
+    transform: translate(0, -20px);
+}
+
+.one .internal {
+    background: url(../img/intro.jpg) no-repeat;
+    background-size: 100% 100%;
+} 
+
+.two .internal {
+    background: url(../img/scenery2.png) no-repeat;
+    background-size: 100% 100%;
+} 
+
+.three .internal {
+    background: url(../img/me.png) no-repeat;
+    background-size: 100% 100%;
+} 
+
+.four .internal {
+    background: url(../img/learn.jpg) no-repeat;
+    background-size: 100% 100%;
+} 
+
+.internal {
+    width: 100%;
+    height: 374px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 20px 48px 0 rgb(59 69 152 / 0.2);
+}
+
+.internal .title {
+    margin-top: 20px;
+    display: flex;
+}
+
+.internal .title p {
+    color: #fcfcfc;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    margin-left: 10px;
+}
+
+.internal .title .self {
+    margin-top: 5px;
+    font-size: 22px;
+}
+
+.internal .content-2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fcfcfc;
+}
+
+.internal .content-2 p {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+.percent .skill-1 {
+    width: 100%;
+    display: flex;
+    margin-left: 28px;
+}
+
+.skill-1 .skill01 {
+    height: 20px;
+    width: 200px;
+    margin-left: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background-color: rgba(180, 160, 120, .2);
+    position: relative;
+
+}
+
+.skill01::before {
+    display: block;
+    counter-reset: progress var(--percent); 
+    content: counter(progress) '%';
+    width: calc(1% * var(--percent));
+    color: #fff;
+    background: linear-gradient(135deg,#1de5e2,#b588f7);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.skill-2  {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 38px;
+}
+
+.skill-2 .skill02 {
+    height: 20px;
+    width: 200px;
+    margin-left: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background-color: rgba(180, 160, 120, .2);
+    position: relative;
+}
+
+.skill02::before {
+    display: block;
+    counter-reset: progress var(--percent); 
+    content: counter(progress) '%';
+    width: calc(1% * var(--percent));
+    color: #fff;
+    background: linear-gradient(135deg,#1de5e2,#b588f7);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.skill-3  {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.skill-3 .skill03 {
+    height: 20px;
+    width: 200px;
+    margin-left: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background-color: rgba(180, 160, 120, .2);
+    position: relative;
+}
+
+.skill03::before {
+    display: block;
+    counter-reset: progress var(--percent); 
+    content: counter(progress) '%';
+    width: calc(1% * var(--percent));
+    color: #fff;
+    background: linear-gradient(135deg,#1de5e2,#b588f7);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: #53add4;
+    background-size: 100% 100%;
+}
+.foot {
+    width: min(100% - 30px, 1080px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.foot .name p {
+    font-size: 36px;
+    font-family: 'Kolker Brush', cursive;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+.foot .social {
+    margin-top: 10px;
+}
+
+
 
 @media (max-width: 768px) {
 
@@ -193,23 +546,20 @@ nav ul li a:hover {
         font-weight: 400;
     }  
 
-    .introduction .text {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        font-size: 20px;
+    .welcome {
+        font-size: 50px;
+        font-family: 'Teko', sans-serif;
+        color: #fff;
+        margin-bottom: 50px;
     }
 
-    .send a {
-        display: block;
-        width: 110px;
-        height: 100%;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        font-size: 20px;
+    .intro {
+        font-size: 40px;
+        font-family: 'Teko', sans-serif;
         color: #fff;
-        background-color: #4da5ff;
-        border-radius: 8px;
     }
+
+    
 
     .content .picture {
         width: 25%;
@@ -243,119 +593,8 @@ nav ul li a:hover {
         padding-bottom: 38px;
     }
 
-    /* ............contact  us............... */
 
-    .advise p {
-        font-size: 30px;
-        font-weight: 500;
-    }
-    
-    .advise .icon {
-        font-size: 38px;
-        margin-bottom: 5px;
-        margin-left: 10px;
-    }
-
-
-    .enter input {
-        width: 100%;
-        height: 80%;
-        font-size: 30px;
-        background-color: transparent;
-    }
-
-    .four {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .four .social {
-        display: flex;
-    }
-    
-    .social a {
-        display: block;
-        font-size: 26px;
-        color: #000;
-    }
-    
-    .social a:hover {
-        font-weight: 900;
-        color: #9accff;
-    }
-    
-    .social a + a {
-        margin-left: 26px;
-    }
-
-    .four .submit {
-        width: 100px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #000;
-        border-radius: 10px;
-    }
-    
-    .four .submit:hover {
-        background-color: #4da5ff;
-    }
-    
-    .submit a {
-        font-size: 16px;
-        font-weight: 400;
-        color: #000;
-        cursor: pointer;
-    }
-    
-    .submit a:hover {
-        color: #fff;
-    }
-
-    /* ............about me............... */
-
-    .banner .box-2 {
-        height: 25%;
-    }
-
-    .banner .box-3 {
-        height: 40%;
-    }
-
-    .box-2 .first-picture {
-        width: 30%;
-        height: 120%;
-        background: url(../img/me.png) no-repeat;
-        background-size: 100% 100%;
-        transform: translate(70px,90px);
-    }
-    
-    .first-p p {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        font-size: 20px;
-        margin-left: 40px;
-    }
-    
-    .box-3 .second-p {
-        width: 56%;
-        height: 40%;
-        font-size: 14px;
-        margin-left: 170px;
-    }
-    
-    .box-3 .third-p {
-        width: 56%;
-        height: 40%;
-        font-size: 14px;
-        margin-top: 10px;
-        margin-left: 170px;
-    }
 }
-
 
 
 
@@ -369,8 +608,8 @@ nav ul li a:hover {
     }
 
     .title h1 {
-        font-size: 10px;
-        font-weight: 300;
+        font-size: 30px;
+        font-weight: 400;
     }
 
     nav .bars {
@@ -381,23 +620,20 @@ nav ul li a:hover {
         transform: translateX(-15px);
     }
 
-    .introduction .text {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        font-size: 14px;
+    .welcome {
+        font-size: 38px;
+        font-family: 'Teko', sans-serif;
+        color: #fff;
+        margin-bottom: 50px;
     }
 
-    .send a {
-        display: block;
-        width: 80px;
-        height: 100%;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        font-size: 14px;
+    .intro {
+        font-size: 26px;
+        font-family: 'Teko', sans-serif;
         color: #fff;
-        background-color: #4da5ff;
-        border-radius: 8px;
     }
+
+    
 
     .content .picture {
         width: 25%;

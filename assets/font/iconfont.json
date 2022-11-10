@@ -6,53 +6,25 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "16888572",
-      "name": "纸飞机",
-      "font_class": "zhifeiji",
-      "unicode": "ec25",
-      "unicode_decimal": 60453
+      "icon_id": "23943124",
+      "name": "账号管理",
+      "font_class": "zhanghaoguanli",
+      "unicode": "f962",
+      "unicode_decimal": 63842
     },
     {
-      "icon_id": "16888599",
-      "name": "喇叭",
-      "font_class": "laba",
-      "unicode": "ec40",
-      "unicode_decimal": 60480
+      "icon_id": "23943276",
+      "name": "任务",
+      "font_class": "renwu",
+      "unicode": "f9db",
+      "unicode_decimal": 63963
     },
     {
-      "icon_id": "17449684",
-      "name": "灯泡",
-      "font_class": "dengpaoA",
-      "unicode": "ecaa",
-      "unicode_decimal": 60586
-    },
-    {
-      "icon_id": "16888598",
-      "name": "健身",
-      "font_class": "jianshen",
-      "unicode": "ec3f",
-      "unicode_decimal": 60479
-    },
-    {
-      "icon_id": "16888606",
-      "name": "阅读",
-      "font_class": "yuedu",
-      "unicode": "ec47",
-      "unicode_decimal": 60487
-    },
-    {
-      "icon_id": "16888571",
-      "name": "面食",
-      "font_class": "mianshi",
-      "unicode": "ec24",
-      "unicode_decimal": 60452
-    },
-    {
-      "icon_id": "16888582",
-      "name": "汽车",
-      "font_class": "qiche",
-      "unicode": "ec2f",
-      "unicode_decimal": 60463
+      "icon_id": "23943326",
+      "name": "书籍",
+      "font_class": "shuji",
+      "unicode": "fa07",
+      "unicode_decimal": 64007
     }
   ]
 }
