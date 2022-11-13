@@ -207,7 +207,7 @@ li a.active .link-text {
     transform: translateX(0);
 }
 
-.link-bg {
+/* .link-bg {
     width: 120px;
     height: 42px;
     background-color: rgba(116, 129, 137, .2);
@@ -218,8 +218,7 @@ li a.active .link-text {
     transform: translateY(-50%);
     z-index: 0;
     transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-
-}
+} */
 
 .banner {
     width: 100%;
