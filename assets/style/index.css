@@ -73,7 +73,9 @@ body {
 }
 
 .title-2 h1:hover {
-    color: #748189;
+    background-image: -webkit-linear-gradient(135deg,#1de5e2,#b588f7);
+    -webkit-background-clip:text; 
+    -webkit-text-fill-color:transparent; 
     cursor: pointer;
 }
 
@@ -138,26 +140,85 @@ nav .bars:hover {
     margin-right: 20px;
 }
 
+nav ul {
+    display: flex;
+    padding: 0;
+}
+
 nav ul li {
-    display: inline;
-    line-height: 50px;
+    width: 100px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 15px;
 }
 
 nav ul li a {
     font-family: 'Teko', sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li .fa-solid {
+    margin-bottom: 10px;
+    font-size: 24px;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    transform: translateX(30px);
+    transition: 0.4s ease;
+}
+
+li .link-text {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 7px;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+li a.active {
     color: #fff;
 }
 
-nav ul li + li {
-    margin-left: 40px;
+li a.active .fa-solid {
+    background-image:-webkit-linear-gradient(135deg,#1de5e2,#b588f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateX(0);
+} 
+
+
+
+li a.active .link-text {
+    opacity: 1;
+    transition-delay: 0.1s;
+    background-image: -webkit-linear-gradient(135deg,#1de5e2,#b588f7);
+    -webkit-background-clip:text; 
+    -webkit-text-fill-color:transparent; 
+    transform: translateX(0);
 }
 
-nav ul li a:hover {
-    font-size: 26px;
-    font-weight: 900;
-    color: #748189;
+.link-bg {
+    width: 120px;
+    height: 42px;
+    background-color: rgba(116, 129, 137, .2);
+    border-radius: 12px;
+    position: absolute;
+    right: 365px;
+    top:47px;
+    transform: translateY(-50%);
+    z-index: 0;
+    transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+
 }
 
 .banner {
@@ -165,6 +226,7 @@ nav ul li a:hover {
     height: 700px;
     background:url(../img/banner.jpg) no-repeat;
     background-size: 100% 100%;
+    background-position: 35px -13px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -543,6 +605,7 @@ footer {
 
 .social .ins {
     color: #ff4500;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
 }
 
 .social .weixin {
